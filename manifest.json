@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Telekom_FON login",
+  "version": "1.0",
+
+  "description": "Logins automatically to Telekom_FON captive page.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.telekom.portal.fon.com/*"],
+      "js": ["main.js"]
+    }
+  ]
+
+}
