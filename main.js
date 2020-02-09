@@ -29,8 +29,8 @@ setInterval(function () {
 
 
 /*
-Apparently it is not possible to close the current tab within Firefox.
-Otherwise, the code below would work!
+With the tabs API, it could be possible to close the tab correctly, but it seems like a lot of work!
+Just window.close() below does not work!
 
 setInterval(function() {
 	var onlineIndicator = document.querySelectorAll('.online-icon');
