@@ -14,6 +14,8 @@ setInterval(function() {
 			document.querySelectorAll('.check')[0].click();
 			// clicking the 'Online gehen' button
 			document.querySelectorAll('button.dtag-button-connect:nth-child(7)')[0].click();
+			// sometimes the above selector does not work!
+			document.querySelectorAll('button.dtag-button-connect:nth-child(8)')[0].click();
 		clickedLoginTab = true;
 		}
 	}
