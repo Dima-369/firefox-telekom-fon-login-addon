@@ -1,25 +1,29 @@
-var clickedLoginTab = false;
-
 setInterval(function() {
-	startTab = document.querySelectorAll('a.tab-login-buy:nth-child(3)')[0];
+	/*startTab = document.querySelectorAll('a.tab-login-buy:nth-child(3)')[0];
 	if (startTab.classList.contains('active')) {
 		console.log('Restarting clicking login tab!');
-		clickedLoginTab = false;
 	}
-	if (!clickedLoginTab) {
-		loginTab = document.querySelectorAll('a.tab-login-hotspot:nth-child(4)')[0];
-		if (loginTab) {
-			loginTab.click();
-			// clicking the 'Eingeloggt bleiben' checkbox
-			document.querySelectorAll('.check')[0].click();
-			// clicking the 'Online gehen' button
-			document.querySelectorAll('button.dtag-button-connect:nth-child(7)')[0].click();
-			// sometimes the above selector does not work!
-			document.querySelectorAll('button.dtag-button-connect:nth-child(8)')[0].click();
-		clickedLoginTab = true;
+	*/
+	loginTab = document.querySelectorAll('a.tab-login-hotspot:nth-child(4)');
+	if (loginTab.length > 0) {
+		loginTab[0].click();
+		// clicking the 'Eingeloggt bleiben' checkbox
+		toClick = document.querySelectorAll('.check');
+		if (toClick.length > 0) {
+			toClick[0].click()
+		}
+		// clicking the 'Online gehen' button
+		toClick = document.querySelectorAll('button.dtag-button-connect:nth-child(7)');
+		if (toClick.length > 0) {
+			toClick[0].click()
+		}
+		// sometimes the above selector does not work!
+		toClick = document.querySelectorAll('button.dtag-button-connect:nth-child(8)').click();
+		if (toClick.length > 0) {
+			toClick[0].click()
 		}
 	}
-}, 100);
+}, 300);
 
 
 // TODO: Maybe click Ausloggen?
